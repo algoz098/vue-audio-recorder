@@ -1,10 +1,12 @@
 {
-  "name": "audio-recorder",
-  "version": "0.1.0",
+  "name": "@algoz098/audio-recorder",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "all": "yarn build && yarn publish && yarn build:gh-pages",
     "build:gh-pages": "vue-cli-service build",
+    "publish": "npm publish --access public",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "lint": "vue-cli-service lint",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/components/AudioRecorder.esm.js",
@@ -55,5 +57,25 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "A Lightweight Vue Component for Audio recording",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algoz098/vue-audio-recorder.git"
+  },
+  "keywords": [
+    "vue",
+    "audio",
+    "audio-recorder",
+    "component"
+  ],
+  "author": "Artur Sena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/algoz098/vue-audio-recorder/issues"
+  },
+  "homepage": "https://github.com/algoz098/vue-audio-recorder#readme"
 }

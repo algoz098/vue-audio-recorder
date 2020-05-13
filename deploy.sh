@@ -7,7 +7,7 @@ set -e
 npm run build:gh-pages
 
 # navigate into the build output directory
-mv dist docs
+cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:algoz098/vue-audio-recorder.git master
+git push -f git@github.com:algoz098/vue-audio-recorder.git master:gh-pages
 
 cd -

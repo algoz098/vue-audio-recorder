@@ -2,14 +2,14 @@
 # audio-recorder
 
 A Lightweight Vue Component for Audio recording
-
+Examples: https://algoz098.github.io/vue-audio-recorder/
   
 ## Install
 
 ```
-npm i --save vue-audio-recorder
+npm i --save @algoz098/audio-recorder
 
-import AudioRecorder from 'vue-audio-recorder'
+import AudioRecorder from '@algoz098/audio-recorder'
 
 Vue.use(AudioRecorder)
 

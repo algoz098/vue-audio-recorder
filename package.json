@@ -4,6 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build:gh-pages": "vue-cli-service build",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "lint": "vue-cli-service lint",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/components/AudioRecorder.esm.js",

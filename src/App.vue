@@ -10,21 +10,10 @@
       </p>
     </div>
 
-    <q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Basic Example</div>
-        <div class="text-subtitle2">Without Customization</div>
-      </q-card-section>
+    <basic-example />
+    <improved-example />
 
-      <q-card-section>
-        <audio-recorder
-          v-model="play"
-          @audio-url="url = $event"
-        />
-      </q-card-section>
-    </q-card>
-
-    <audio-recorder
+    <!-- <audio-recorder
       v-model="play"
       @audio-url="url = $event"
     >
@@ -41,21 +30,19 @@
       />
 
       {{ url }}
-    </audio-recorder>
+    </audio-recorder> -->
   </div>
 </template>
 
-<script src="https://cdn.jsdelivr.net/npm/quasar@1.11.1/dist/quasar.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/quasar@1.11.1/dist/lang/pt-br.umd.min.js"></script>
-
 <script>
-import AudioRecorder from './components/AudioRecorder'
-// Quasar.lang.set(Quasar.lang.ptBr)
+import BasicExample from './example/BasicExample'
+import ImprovedExample from './example/ImprovedExample'
 export default {
   name: 'App',
 
   components: {
-    AudioRecorder
+    BasicExample,
+    ImprovedExample
   },
 
   data () {
@@ -68,9 +55,6 @@ export default {
 </script>
 
 <style>
- @import "https://cdn.jsdelivr.net/npm/quasar@1.11.1/dist/quasar.min.css";
- @import "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons";
-
 #app {
   display: flex;
   flex-direction: column;

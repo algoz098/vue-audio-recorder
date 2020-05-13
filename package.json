@@ -2,35 +2,39 @@
   "name": "audio-recorder",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/components/AudioRecorder.umd.js",
-  "module": "dist/components/AudioRecorder.esm.js",
-  "unpkg": "dist/components/AudioRecorder.min.js",
-  "browser": {
-    "./sfc": "src/components/AudioRecorder.vue"
-  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/components/AudioRecorder.umd.js",
+    "lint": "vue-cli-service lint",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/components/AudioRecorder.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/components/AudioRecorder.min.js",
-    "lint": "vue-cli-service lint"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/components/AudioRecorder.umd.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/components/AudioRecorder.min.js"
   },
+  "main": "dist/components/AudioRecorder.umd.js",
+  "module": "dist/components/AudioRecorder.esm.js",
+  "browser": {
+    "./sfc": "src/components/AudioRecorder.vue"
+  },
+  "unpkg": "dist/components/AudioRecorder.min.js",
   "dependencies": {
+    "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.4",
+    "quasar": "^1.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "rollup": "^1.17.0",
-    "rollup-plugin-buble": "^0.19.8",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-vue": "^5.0.1",
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-eslint": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-imports": "1.5.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "rollup": "^1.17.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue-cli-plugin-quasar": "~2.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

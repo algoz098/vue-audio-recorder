@@ -4,16 +4,19 @@
     class="__audio-recorder"
   >
     <slot />
-    <button @click="start">
-      Start
-    </button>
-    <button @click="stop">
-      Stop
-    </button>
 
-    <span v-if="recording">
-      {{ timePassed }}
-    </span>
+    <div v-if="!$slots.default">
+      <button @click="start">
+        Start
+      </button>
+      <button @click="stop">
+        Stop
+      </button>
+
+      <span v-if="recording">
+        {{ timePassed }}
+      </span>
+    </div>
   </div>
 </template>
 
